@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fazer Movimentação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+    }
+    
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Fazer Movimentação</h2>
+  <form action="/contaCorrente/movimentacao/<%= contaCorrenteId %>" method="post">
+    <label for="valor">Valor:</label>
+    <input type="text" id="valor" name="valor" required>
+
+    <label for="valor">Numero CC de destino:</label>
+    <input type="text" id="contaDestino" name="contaDestino" >
+    
+    <label for="tipoC">Crédito</label>
+    <input type="radio" id="tipoC" name="tipoMovimentacao" value="C" required>
+    
+    <label for="tipoD">Débito</label>
+    <input type="radio" id="tipoD" name="tipoMovimentacao" value="D" required>
+
+    <label for="valor">Observacao:</label>
+    <input type="text" id="observacao" name="observacao" >
+    
+    <input type="submit" value="Fazer Movimentação">
+  </form>
+  
+  <input type="submit" value="Voltar" onclick="window.location.href='/usuario/login'">
+</body>
+</html>

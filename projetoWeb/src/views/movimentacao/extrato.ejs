@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extrato de Transação Bancária</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Extrato de Transação Bancária</h1>
+  
+  <h2>Dados da Movimentação</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Observação</th>
+      <th>Conta de Origem</th>
+      <th>Conta de Destino</th>
+      <th>Data Movimento</th>
+      <th>Valor</th>
+      <th>Tipo</th>
+    </tr>
+    <tr>
+      <td><%= movimentacao.id %></td>
+      <td><%= movimentacao.observacao %></td>
+      <td><%= movimentacao.contaOrigem %></td>
+      <td><%= movimentacao.contaDestino %></td>
+      <td><%= movimentacao.dataMovimento %></td>
+      <td><%= movimentacao.valor %></td>
+      <td><%= movimentacao.tipo %></td>      
+    </tr>
+  </table>
+</body>
+</html>
